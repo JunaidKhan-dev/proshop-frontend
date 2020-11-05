@@ -22,7 +22,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito', Sans-Serif;
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height:1.6;
 }
 
@@ -37,13 +37,44 @@ a{
 h1, h2, h3, h4,h5,h6,p, li, ul{
   margin: 0;
 }
+
+main {
+  min-height: calc(100vh - 16rem);
+}
+.container {
+width:90%;
+max-width:1280px; 
+margin:0 auto;
+}
+
 `;
 
-const COLORS = {
-  text: "black",
-  background: "white",
-  primary: "purple",
+interface COLOR {
+  orange: string;
+  dark: string;
+  blue: string;
+  yellow: string;
+  light: string;
+}
+
+const COLORS: COLOR = {
+  orange: "#BB4430",
+  dark: "#231F20",
+  blue: "#7EBDC2",
+  yellow: "#F3DFA2",
+  light: "#EFE6DD",
 };
 
-export { COLORS };
+const TYPOS: any = {
+  sizes: {
+    XXL: "5rem",
+    XL: "4rem",
+    L: "3rem",
+    M: "2rem",
+    S: "1rem",
+    XS: "0.5rem",
+  },
+};
+
+export { COLORS, TYPOS };
 export default GlobalStyle;

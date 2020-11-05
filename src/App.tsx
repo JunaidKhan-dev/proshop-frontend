@@ -1,10 +1,16 @@
 import React from "react";
-import Layout from "./components/layout/Layout";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Home from "./pages/Home";
 
 const App = (props: any) => {
   return (
     <>
-      <Layout>{props.children}</Layout>
+      <Header />
+      <main>
+        <Home />
+      </main>
+      <Footer />
     </>
   );
 };

@@ -1,15 +1,69 @@
 import React from "react";
 import styled from "styled-components";
+import { FaThemeco } from "react-icons/fa";
+const HeaderWrapper = styled.header`
+  background: ${(props) => props.theme.colors.orange};
+  color: ${(props) => props.theme.colors.light};
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8rem;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 50px;
+      font-size: 3rem;
+      text-shadow: 7px 4px 10px ${(props) => props.theme.colors.dark};
+      cursor: pointer;
+      i {
+        align-self: center;
+        vertical-align: center;
+        display: inline-flex;
+        margin-left: 0.5rem;
+        font-size: 5rem;
+        color: ${(props) => props.theme.colors.yellow};
+      }
+    }
+  }
 
-const Button = styled.button`
-  background: ${(props) => props.theme.colors.primary};
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: 0 1rem;
+      a {
+        text-decoration: none;
+        color: ${(props) => props.theme.colors.yellow};
+      }
+    }
+  }
 `;
-
 const Header = (props: any) => {
   return (
-    <header>
-      <Button>Header </Button>
-    </header>
+    <HeaderWrapper>
+      <nav className="container">
+        <span onClick={() => console.log("go to home")}>
+          ProShop{" "}
+          <i>
+            <FaThemeco />
+          </i>
+        </span>
+        <ul>
+          <li>
+            <a href="#">CART</a>
+          </li>
+          <li>
+            <a href="#">SIGN IN</a>
+          </li>
+        </ul>
+      </nav>
+    </HeaderWrapper>
   );
 };
 
