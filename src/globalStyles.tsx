@@ -69,12 +69,19 @@ const TYPOS: any = {
   sizes: {
     XXL: "5rem",
     XL: "4rem",
-    L: "3rem",
-    M: "2rem",
+    LG: "3rem",
+    MD: "2rem",
     S: "1rem",
     XS: "0.5rem",
   },
 };
 
-export { COLORS, TYPOS };
+const BREAKPOINTS: any = {
+  sm: "576px",
+  md: "768px",
+  lg: "992px",
+  xl: "1200px",
+};
+
+export { COLORS, TYPOS, BREAKPOINTS };
 export default GlobalStyle;
