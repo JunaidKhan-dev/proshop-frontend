@@ -41,12 +41,13 @@ const SectionWrapper = styled.section`
 const Home = () => {
   const [show, setShow] = useState(false);
   useEffect(() => {
-    const spinnerTimeout = setTimeout(() => {
+    const spinnerTimeout = window.setTimeout(() => {
       setShow(true);
-    }, 1000);
+      console.log("timeout trigger");
+    }, 500);
 
     return () => {
-      clearTimeout(spinnerTimeout);
+      window.clearTimeout(spinnerTimeout);
     };
   }, []);
   return (

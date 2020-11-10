@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaThemeco, FaShoppingCart, FaUser } from "react-icons/fa";
+import { NavLink, Redirect, useHistory } from "react-router-dom";
 const HeaderWrapper = styled.header`
   background: ${(props) => props.theme.colors.orange};
   color: ${(props) => props.theme.colors.light};
@@ -51,10 +52,11 @@ const HeaderWrapper = styled.header`
   }
 `;
 const Header = (props: any) => {
+  const history = useHistory();
   return (
     <HeaderWrapper>
       <nav className="container">
-        <span onClick={() => console.log("go to home")}>
+        <span onClick={() => history.push("/")}>
           ProShop{" "}
           <i>
             <FaThemeco />
@@ -62,20 +64,20 @@ const Header = (props: any) => {
         </span>
         <ul>
           <li>
-            <a href="#">
+            <NavLink to="/cart">
               <i>
                 <FaShoppingCart />
               </i>{" "}
               CART
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#">
+            <NavLink to="/signin">
               <i>
                 <FaUser />
               </i>
               SIGN IN
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const DivWrapper = styled.div`
   background: whitesmoke;
@@ -37,12 +38,12 @@ const Product = (props: any) => {
   const { product } = props;
   return (
     <DivWrapper>
-      <a href={`/product/${product._id}`}>
+      <Link to={`/product/${product._id}`}>
         <img src={product.image} alt={product.name} />
-      </a>
-      <a href={`/product/${product._id}`}>
+      </Link>
+      <Link to={`/product/${product._id}`}>
         <h3>{product.name}</h3>
-      </a>
+      </Link>
 
       <div className="detail">
         <p>
