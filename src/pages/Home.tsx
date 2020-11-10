@@ -37,12 +37,17 @@ const SectionWrapper = styled.section`
     }
   }
 `;
+
 const Home = () => {
   const [show, setShow] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
+    const spinnerTimeout = setTimeout(() => {
       setShow(true);
-    }, 2000);
+    }, 1000);
+
+    return () => {
+      clearTimeout(spinnerTimeout);
+    };
   }, []);
   return (
     <SectionWrapper className="container">
