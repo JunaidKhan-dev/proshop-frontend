@@ -5,7 +5,7 @@ import Header from "./components/header/Header";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 
-const App = (props: any) => {
+const App = () => {
   return (
     <>
       <Header />

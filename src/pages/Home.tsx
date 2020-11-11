@@ -10,8 +10,8 @@ const SectionWrapper = styled.section`
   padding: 2rem 0;
   h1 {
     font-size: ${(props) => props.theme.typos.sizes.XL};
-    color: ${(props) => props.theme.colors.dark};
     margin-bottom: ${(props) => props.theme.typos.sizes.MD};
+    text-align: center;
   }
   article {
     display: grid;
@@ -39,7 +39,7 @@ const SectionWrapper = styled.section`
 `;
 
 const Home = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState<boolean>(false);
   useEffect(() => {
     const spinnerTimeout = window.setTimeout(() => {
       setShow(true);

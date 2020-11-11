@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -33,9 +33,24 @@ const DivWrapper = styled.div`
     }
   }
 `;
-const Product = (props: any) => {
-  const rating = Math.round(parseFloat(props.product.rating));
-  const { product } = props;
+
+interface Props {
+  product: {
+    brand: string;
+    category: string;
+    countInStock: number;
+    description: string;
+    image: string;
+    name: string;
+    numReviews: number;
+    price: number;
+    rating: any;
+    _id: string;
+  };
+}
+
+const Product: FC<Props> = ({ product }) => {
+  const rating = Math.round(parseFloat(product.rating));
   return (
     <DivWrapper>
       <Link to={`/product/${product._id}`}>

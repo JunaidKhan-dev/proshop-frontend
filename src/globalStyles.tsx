@@ -24,6 +24,7 @@ body {
   font-family: 'Nunito', Sans-Serif;
   font-size: 1.6rem;
   line-height:1.6;
+  color: #3f3e3f;
 }
 
 img {
@@ -36,6 +37,7 @@ a{
 
 h1, h2, h3, h4,h5,h6,p, li, ul{
   margin: 0;
+  color: #3f3e3f;
 }
 
 main {
